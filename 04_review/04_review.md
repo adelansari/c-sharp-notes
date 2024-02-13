@@ -81,8 +81,96 @@ The `04_review` folder is dedicated to exploring inheritance and polymorphism, t
 ## Exercises
 
 1. Create a new derived class from `Animal` and add unique properties or methods.
+   ```csharp
+    public class Animal
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+
+        public void Eat()
+        {
+            Console.WriteLine($"{Name} is eating.");
+        }
+
+        public void Sleep()
+        {
+            Console.WriteLine($"{Name} is sleeping.");
+        }
+    }
+
+    public class Dog : Animal
+    {
+        public string Breed { get; set; }
+
+        public void Bark()
+        {
+            Console.WriteLine($"{Name} is barking.");
+        }
+
+        public void Fetch()
+        {
+            Console.WriteLine($"{Name} is fetching.");
+        }
+    }
+    ```
 2. Override a method in a derived class and demonstrate how it changes the behavior compared to the base class.
+   ```csharp
+    using System;
+
+    public class Animal
+    {
+        public virtual void MakeSound()
+        {
+            Console.WriteLine("The animal makes a sound");
+        }
+    }
+
+    public class Dog : Animal
+    {
+        public override void MakeSound()
+        {
+            Console.WriteLine("The dog barks");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Animal myAnimal = new Animal();
+            Animal myDog = new Dog();
+
+            myAnimal.MakeSound();  // Outputs: "The animal makes a sound"
+            myDog.MakeSound();     // Outputs: "The dog barks"
+        }
+    }
+    ```
 3. Experiment with creating and using inner classes within a class.
+   ```csharp
+    public class OuterClass {
+        private String outerField = "Outer field";
+
+        class InnerClass {
+            private String innerField = "Inner field";
+
+            public void displayFields() {
+                System.out.println("Outer Field: " + outerField);
+                System.out.println("Inner Field: " + innerField);
+            }
+        }
+
+        public static void main(String[] args) {
+            // Create an instance of the outer class
+            OuterClass outer = new OuterClass();
+
+            // Create an instance of the inner class
+            OuterClass.InnerClass inner = outer.new InnerClass();
+
+            // Call a method on the inner class
+            inner.displayFields();
+        }
+    }
+    ```
 
 ---
 
