@@ -77,9 +77,120 @@ The `05_review` folder delves into the concepts of abstract classes, interfaces,
 ## Exercises
 
 1. Create a new interface with a few methods and properties, and implement it in a class.
+   ```csharp
+    public interface IVehicle
+    {
+        string Make { get; set; }
+        string Model { get; set; }
+        int Year { get; set; }
+
+        void StartEngine();
+        void StopEngine();
+        void Accelerate();
+        void Brake();
+    }
+
+    public class Car : IVehicle
+    {
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public int Year { get; set; }
+
+        public void StartEngine()
+        {
+            Console.WriteLine($"{Make} {Model} engine started.");
+        }
+
+        public void StopEngine()
+        {
+            Console.WriteLine($"{Make} {Model} engine stopped.");
+        }
+
+        public void Accelerate()
+        {
+            Console.WriteLine($"{Make} {Model} is accelerating.");
+        }
+
+        public void Brake()
+        {
+            Console.WriteLine($"{Make} {Model} is braking.");
+        }
+    }
+    ```
 2. Extend the `Shape` class with a new derived class, implementing the abstract methods.
+   ```csharp
+    public abstract class Shape
+    {
+        public abstract double CalculateArea();
+    }
+
+    public class Circle : Shape
+    {
+        public double Radius { get; set; }
+
+        public Circle(double radius)
+        {
+            Radius = radius;
+        }
+
+        public override double CalculateArea()
+        {
+            return Math.PI * Math.Pow(Radius, 2);
+        }
+    }
+    ```
 3. Write a method that takes a `Shape` object and uses type checking and casting to perform specific operations based on the actual type of the shape.
+   ```csharp
+    public abstract class Shape
+    {
+        public abstract double CalculateArea();
+    }
+
+    public class Circle : Shape
+    {
+        public double Radius { get; set; }
+
+        public Circle(double radius)
+        {
+            Radius = radius;
+        }
+
+        public override double CalculateArea()
+        {
+            return Math.PI * Math.Pow(Radius, 2);
+        }
+    }
+
+    public class Square : Shape
+    {
+        public double Side { get; set; }
+
+        public Square(double side)
+        {
+            Side = side;
+        }
+
+        public override double CalculateArea()
+        {
+            return Math.Pow(Side, 2);
+        }
+    }
+
+    public void PerformShapeOperation(Shape shape)
+    {
+        if (shape is Circle circle)
+        {
+            Console.WriteLine($"Performing circle operation. Area: {circle.CalculateArea()}");
+        }
+        else if (shape is Square square)
+        {
+            Console.WriteLine($"Performing square operation. Area: {square.CalculateArea()}");
+        }
+        else
+        {
+            Console.WriteLine("Shape not recognized.");
+        }
+    }
+    ```
 
 ---
-
-Mastering abstract classes, interfaces, and polymorphism is key to building scalable and maintainable applications in C#. Use these concepts to create a solid foundation for your C# programming skills.
