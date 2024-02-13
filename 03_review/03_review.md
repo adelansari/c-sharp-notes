@@ -73,9 +73,49 @@ The `03_review` folder continues the exploration of Object-Oriented Programming 
 ## Exercises
 
 1. Modify the `Animal` class to include a method that displays all properties of the animal.
+   ```csharp
+    class Animal {
+         private string name;
+         private string sound;
+         public void DisplayInfo() {
+              Console.WriteLine($"Name: {name}, Sound: {sound}");
+         }
+    }
+
+    Animal cat = new Animal();
+    cat.name = "Whiskers";
+    cat.sound = "Meow";
+    cat.DisplayInfo();
+    ```
 2. Create a new class with private fields and public properties, and experiment with different access levels.
+   ```csharp
+    class Person {
+         private string name;
+         public string Name {
+             get { return name; }
+             set { name = value; }
+         }
+    }
+
+    Person p = new Person();
+    p.Name = "Alice";
+    Console.WriteLine(p.Name);
+   ```
 3. Implement a static property in a class and demonstrate its shared nature across multiple instances.
+   ```csharp
+    class Vehicle {
+         private static int numOfVehicles = 0;
+         public static int NumOfVehicles {
+             get { return numOfVehicles; }
+             set { numOfVehicles = value; }
+         }
+    }
+
+    Vehicle car1 = new Vehicle();
+    Vehicle car2 = new Vehicle();
+    Vehicle.NumOfVehicles = 2;
+    Console.WriteLine(Vehicle.NumOfVehicles);
+   ```
 
 ---
 
-Advanced OOP concepts in C# are fundamental for creating well-structured and secure applications. Use these examples and exercises to deepen your understanding of these concepts.
