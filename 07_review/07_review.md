@@ -57,9 +57,205 @@ The `07_review` folder delves into advanced Object-Oriented Programming (OOP) co
 ## Exercises
 
 1. Create a new strategy for the `Warrior` class and integrate it to see how it changes the warrior's behavior.
+   ```csharp
+    public interface ICombatStrategy
+    {
+        void Execute();
+    }
+
+    public class AggressiveStrategy : ICombatStrategy
+    {
+        public void Execute()
+        {
+            Console.WriteLine("Aggressive strategy: Attack!");
+        }
+    }
+
+    public class DefensiveStrategy : ICombatStrategy
+    {
+        public void Execute()
+        {
+            Console.WriteLine("Defensive strategy: Defend!");
+        }
+    }
+
+    public class Warrior
+    {
+        private ICombatStrategy _combatStrategy;
+
+        public Warrior(ICombatStrategy combatStrategy)
+        {
+            _combatStrategy = combatStrategy;
+        }
+
+        public void SetStrategy(ICombatStrategy combatStrategy)
+        {
+            _combatStrategy = combatStrategy;
+        }
+
+        public void ExecuteStrategy()
+        {
+            _combatStrategy.Execute();
+        }
+    }
+
+    Warrior warrior = new Warrior(new AggressiveStrategy());
+    warrior.ExecuteStrategy();  // Outputs: "Aggressive strategy: Attack!"
+
+    warrior.SetStrategy(new DefensiveStrategy());
+    warrior.ExecuteStrategy();  // Outputs: "Defensive strategy: Defend!"
+    ```
 2. Implement a different behavioral pattern (like Observer or Singleton) and compare it with the Strategy Pattern.
+   ```csharp
+   public interface IObserver
+    {
+        void Update(string message);
+    }
+
+    public class Observer : IObserver
+    {
+        private string _name;
+
+        public Observer(string name)
+        {
+            _name = name;
+        }
+
+        public void Update(string message)
+        {
+            Console.WriteLine($"{_name} received: {message}");
+        }
+    }
+
+    public class Subject
+    {
+        private List<IObserver> _observers = new List<IObserver>();
+
+        public void RegisterObserver(IObserver observer)
+        {
+            _observers.Add(observer);
+        }
+
+        public void UnregisterObserver(IObserver observer)
+        {
+            _observers.Remove(observer);
+        }
+
+        public void NotifyObservers(string message)
+        {
+            foreach (var observer in _observers)
+            {
+                observer.Update(message);
+            }
+        }
+    }
+   ```
 3. Design a small simulation where strategies can be swapped dynamically based on different conditions or user input.
+   ```csharp
+    public class Battle
+     {
+          private ICombatStrategy _strategy;
+    
+          public Battle(ICombatStrategy strategy)
+          {
+                _strategy = strategy;
+          }
+    
+          public void ChangeStrategy(ICombatStrategy strategy)
+          {
+                _strategy = strategy;
+          }
+    
+          public void ExecuteStrategy()
+          {
+                _strategy.Execute();
+          }
+     }
+    
+     Battle battle = new Battle(new AggressiveStrategy());
+     battle.ExecuteStrategy();  // Outputs: "Aggressive strategy: Attack!"
+    
+     battle.ChangeStrategy(new DefensiveStrategy());
+     battle.ExecuteStrategy();  // Outputs: "Defensive strategy: Defend!"
+    ```
+
+    or
+
+    ```csharp
+    public interface ICombatStrategy
+    {
+        void Execute();
+    }
+
+    public class AggressiveStrategy : ICombatStrategy
+    {
+        public void Execute()
+        {
+            Console.WriteLine("Aggressive strategy: Attack!");
+        }
+    }
+
+    public class DefensiveStrategy : ICombatStrategy
+    {
+        public void Execute()
+        {
+            Console.WriteLine("Defensive strategy: Defend!");
+        }
+    }
+
+    public class Warrior
+    {
+        private ICombatStrategy _combatStrategy;
+
+        public Warrior(ICombatStrategy combatStrategy)
+        {
+            _combatStrategy = combatStrategy;
+        }
+
+        public void SetStrategy(ICombatStrategy combatStrategy)
+        {
+            _combatStrategy = combatStrategy;
+        }
+
+        public void ExecuteStrategy()
+        {
+            _combatStrategy.Execute();
+        }
+    }
+
+    public class Simulation
+    {
+        public void Run()
+        {
+            Warrior warrior = new Warrior(new AggressiveStrategy());
+
+            while (true)
+            {
+                Console.WriteLine("Enter 'a' for aggressive strategy, 'd' for defensive strategy, or 'q' to quit:");
+                string input = Console.ReadLine();
+
+                if (input == "a")
+                {
+                    warrior.SetStrategy(new AggressiveStrategy());
+                }
+                else if (input == "d")
+                {
+                    warrior.SetStrategy(new DefensiveStrategy());
+                }
+                else if (input == "q")
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input");
+                    continue;
+                }
+
+                warrior.ExecuteStrategy();
+            }
+        }
+    }
+    ```
 
 ---
-
-Mastering advanced OOP concepts and design patterns like the Strategy Pattern is key to building sophisticated and adaptable software systems in C#. These exercises and examples provide a practical framework for understanding and applying these concepts.
