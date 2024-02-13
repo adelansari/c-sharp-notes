@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `07_review` folder delves into advanced Object-Oriented Programming (OOP) concepts and the implementation of the Strategy Pattern in C#. This section is crucial for understanding how to design flexible and dynamic software systems using advanced OOP techniques.
+The file delves into advanced Object-Oriented Programming (OOP) concepts and the implementation of the Strategy Pattern in C#. This section is crucial for understanding how to design flexible and dynamic software systems using advanced OOP techniques.
 
 ## Topics Covered
 

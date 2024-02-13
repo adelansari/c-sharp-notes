@@ -2,13 +2,13 @@
 
 ## Overview
 
-This folder delves into the core concepts of Object-Oriented Programming (OOP) in C#. It's designed to provide a practical understanding of how OOP principles are applied in C# programming.
+This file delves into the core concepts of Object-Oriented Programming (OOP) in C#. It's designed to provide a practical understanding of how OOP principles are applied in C# programming.
 
 ## Topics Covered
 
 1. **Class and Object Creation**
    - Understanding the basic structure of a class and how to instantiate it as an object.
-   - Example:
+   - Example from `Animal.cs`:
      ```csharp
      class Animal {
          public string name;
@@ -23,7 +23,7 @@ This folder delves into the core concepts of Object-Oriented Programming (OOP) i
 
 2. **Constructors**
    - Exploring how constructors are used to initialize objects.
-   - Example:
+   - Example from `Animal.cs`:
      ```csharp
      class Animal {
          public Animal(string name = "No Name", string sound = "No Sound") {
@@ -36,25 +36,20 @@ This folder delves into the core concepts of Object-Oriented Programming (OOP) i
 
 3. **Static Methods and Fields**
    - Learning about static members of a class and their shared nature across all instances.
-   - Example:
+   - Example from `ShapeMath.cs`:
      ```csharp
-     class Animal {
-         static int numOfAnimals = 0;
-         public static int GetNumAnimals() {
-             return numOfAnimals;
+     class ShapeMath {
+         static int numOfShapes = 0;
+         public static int GetNumShapes() {
+             return numOfShapes;
          }
      }
      ```
 
-4. **Basic Principles of OOP**
-   - Encapsulation: Keeping the internal state of an object hidden from the outside.
-   - Inheritance: Creating new classes that inherit properties and methods from existing classes.
-   - Polymorphism: Allowing methods to do different things based on the object they are acting upon.
-
-5. **Nullable Types and Structs**
+4. **Nullable Types and Structs**
    - Understanding the use of nullable types for handling null values.
    - Learning about structs, which are similar to classes but used for smaller and less complex data structures.
-   - Example:
+   - Example from `Program.cs`:
      ```csharp
      struct Rectangle {
          public double length;
@@ -65,7 +60,7 @@ This folder delves into the core concepts of Object-Oriented Programming (OOP) i
      }
      ```
 
-6. **Example Classes: `Animal`, `ShapeMath`**
+5. **Example Classes: `Animal`, `ShapeMath`**
    - `Animal`: A basic class to represent an animal with properties like name and sound.
    - `ShapeMath`: A utility class demonstrating static methods.
 
@@ -74,7 +69,6 @@ This folder delves into the core concepts of Object-Oriented Programming (OOP) i
 - Pay attention to how constructors are used to initialize objects with default or specific values.
 - Notice the use of `static` keyword and how it affects the behavior of methods and fields.
 - Understand the difference between a class and a struct, and when to use each.
-- Explore the basic principles of OOP and how they are implemented in C#.
 
 ## Exercises
 
@@ -118,4 +112,3 @@ This folder delves into the core concepts of Object-Oriented Programming (OOP) i
     ```
 
 ---
-

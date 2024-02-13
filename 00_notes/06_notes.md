@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `06_review` folder focuses on the use of interfaces and the implementation of design patterns in C#. This section is essential for understanding how to create modular, reusable, and maintainable code structures in professional software development.
+The file focuses on the use of interfaces and the implementation of design patterns in C#. This section is essential for understanding how to create modular, reusable, and maintainable code structures in professional software development.
 
 ## Topics Covered
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `04_review` folder is dedicated to exploring inheritance and polymorphism, two fundamental concepts in Object-Oriented Programming (OOP) in C#. This section helps in understanding how to create hierarchical class structures and leverage polymorphism for more dynamic and flexible code.
+This file is dedicated to exploring inheritance and polymorphism, two fundamental concepts in Object-Oriented Programming (OOP) in C#. This section helps in understanding how to create hierarchical class structures and leverage polymorphism for more dynamic and flexible code.
 
 ## Topics Covered
 

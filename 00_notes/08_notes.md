@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `08_review` folder is designed to explore advanced C# programming concepts. This section is ideal for deepening your understanding of complex C# features and programming techniques that are essential for high-level software development.
+The file is designed to explore advanced C# programming concepts. This section is ideal for deepening your understanding of complex C# features and programming techniques that are essential for high-level software development.
 
 ## Topics Covered
 

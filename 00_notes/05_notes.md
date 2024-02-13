@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `05_review` folder delves into the concepts of abstract classes, interfaces, and advanced polymorphism in C#. This section is crucial for understanding how to design flexible and reusable code using these advanced OOP features.
+The file delves into the concepts of abstract classes, interfaces, and advanced polymorphism in C#. This section is crucial for understanding how to design flexible and reusable code using these advanced OOP features.
 
 ## Topics Covered
 

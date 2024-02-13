@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `09_review` folder is dedicated to exploring a range of advanced features and techniques in C#. This section is designed for those who are already familiar with the basics and intermediate aspects of C# and are looking to further enhance their skills with more complex and powerful features of the language.
+The file is dedicated to exploring a range of advanced features and techniques in C#. This section is designed for those who are already familiar with the basics and intermediate aspects of C# and are looking to further enhance their skills with more complex and powerful features of the language.
 
 ## Topics Covered
 

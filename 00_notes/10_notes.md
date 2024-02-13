@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `10_review` folder covers multiple functions you can use to work with lists of data in C#, including Lambda, Where, ToList, Select, Zip, Aggregate, and Average.
+The file covers multiple functions you can use to work with lists of data in C#, including Lambda, Where, ToList, Select, Zip, Aggregate, and Average.
 
 ## Topics Covered
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `03_review` folder continues the exploration of Object-Oriented Programming (OOP) in C#, focusing on more advanced concepts. This section is crucial for understanding how to effectively encapsulate data, define behaviors, and create robust C# applications.
+This file continues the exploration of Object-Oriented Programming (OOP) in C#, focusing on more advanced concepts. This section is crucial for understanding how to effectively encapsulate data, define behaviors, and create robust C# applications.
 
 ## Topics Covered
 
